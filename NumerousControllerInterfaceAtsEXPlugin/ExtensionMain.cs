@@ -10,11 +10,10 @@ using System.Diagnostics;
 using System.Threading;
 using FastMember;
 using AtsEx.PluginHost;
-using MonoMod.Utils;
 
 namespace Kusaanko.Bvets.NumerousControllerInterface.AtsEXPlugin
 {
-    [PluginType(PluginType.Extension)]
+    [Plugin(PluginType.Extension)]
     public class ExtensionMain : AssemblyPluginBase, IExtension
     {
         private Assembly NumerousControllerInterfaceAssembly;
@@ -228,22 +227,22 @@ namespace Kusaanko.Bvets.NumerousControllerInterface.AtsEXPlugin
                 }
                 if (key == "Standard.DoorClosed")
                 {
-                    return BveHacker.Scenario.Vehicle.Doors.AreAllClosingOrClosed;
+                    return BveHacker.Scenario.Vehicle.Doors.AreAllClosed;
                 }
                 if (key == "Standard.BcPressure")
                 {
-                    if (BveHacker.Scenario.Vehicle.Instruments.PluginLoader.StateStore.BcPressure.Length > 0)
-                        return BveHacker.Scenario.Vehicle.Instruments.PluginLoader.StateStore.BcPressure[0];
+                    if (BveHacker.Scenario.Vehicle.Instruments.AtsPlugin.StateStore.BcPressure.Length > 0)
+                        return BveHacker.Scenario.Vehicle.Instruments.AtsPlugin.StateStore.BcPressure[0];
                 }
                 if (key == "Standard.BpPressure")
                 {
-                    if (BveHacker.Scenario.Vehicle.Instruments.PluginLoader.StateStore.BpPressure.Length > 0)
-                        return BveHacker.Scenario.Vehicle.Instruments.PluginLoader.StateStore.BpPressure[0];
+                    if (BveHacker.Scenario.Vehicle.Instruments.AtsPlugin.StateStore.BpPressure.Length > 0)
+                        return BveHacker.Scenario.Vehicle.Instruments.AtsPlugin.StateStore.BpPressure[0];
                 }
                 if (key == "Standard.Current")
                 {
-                    if (BveHacker.Scenario.Vehicle.Instruments.PluginLoader.StateStore.Current.Length > 0)
-                        return BveHacker.Scenario.Vehicle.Instruments.PluginLoader.StateStore.Current[0];
+                    if (BveHacker.Scenario.Vehicle.Instruments.AtsPlugin.StateStore.Current.Length > 0)
+                        return BveHacker.Scenario.Vehicle.Instruments.AtsPlugin.StateStore.Current[0];
                 }
             } else
             {

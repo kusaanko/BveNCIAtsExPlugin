@@ -12,7 +12,7 @@ BVE5、6用のコントローラー入力プラグイン NumerousContollerInterf
 Supported language is only Japanese now.
 
 > [!WARNING]
-> AtsEXとの連携機能はまだまだ不安定であり、手動でのインストールが必要です。詳しくは下の項目または[Wiki](https://github.com/kusaanko/BveNumerousControllerInterface/wiki/AtsEX)をご覧ください。
+> AtsEXとの連携機能はまだまだ不安定であり、手動でのインストールが必要です。詳しくは下の項目をご覧ください。
 
 # ダウンロード
 [Releases](https://github.com/kusaanko/BveNCIAtsExPlugin/releases)からダウンロード
